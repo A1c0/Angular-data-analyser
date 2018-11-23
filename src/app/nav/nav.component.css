@@ -3,3 +3,15 @@
   padding: 30px;
   border: 2px solid black;
 }
+
+h1 {
+  text-align: center;
+  color: brown;
+}
+div {
+  margin: 15px;
+}
+
+.nav_button {
+  margin: 10px;
+}
