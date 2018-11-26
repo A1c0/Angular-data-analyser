@@ -8,6 +8,9 @@ import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
 import { LoginComponent } from './login/login.component';
 import { MnistComponent } from './mnist/mnist.component';
+import { MnistDrawComponent } from './mnist-draw/mnist-draw.component';
+import { MnistImageComponent } from './mnist-image/mnist-image.component';
+import { MnistGraphComponent } from './mnist-graph/mnist-graph.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { MnistComponent } from './mnist/mnist.component';
     BodyComponent,
     LoginComponent,
     MnistComponent,
+    MnistDrawComponent,
+    MnistImageComponent,
+    MnistGraphComponent,
   ],
   imports: [
     BrowserModule,
