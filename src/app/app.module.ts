@@ -7,6 +7,10 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
 import { LoginComponent } from './login/login.component';
+import { StatsComponent } from './stats/stats.component';
+import {AuthService} from './services/auth.service';
+import {FormsModule} from '@angular/forms';
+import { AlertsComponent } from './alerts/alerts.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +18,16 @@ import { LoginComponent } from './login/login.component';
     NavComponent,
     FooterComponent,
     BodyComponent,
-    LoginComponent
+    LoginComponent,
+    StatsComponent,
+    AlertsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
