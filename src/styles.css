@@ -6,3 +6,7 @@ footer {
   background: gray;
   padding: 30px;
 }
+
+.container h2 {
+  text-align: center;
+}
