@@ -1,0 +1,12 @@
+.btn-predict {
+  horiz-align: center;
+}
+
+#canvas {
+  border: brown;
+  border-radius: 10px;
+  background-color: antiquewhite;
+  width: 300px;
+  height: 150px;
+  margin: 5px;
+}
