@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { PlotlyModule } from 'angular-plotly.js';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,8 @@ import { CanvasComponent } from './mnists/canvas/canvas.component';
 import { AuthService } from './services/auth.service';
 import { FormsModule } from '@angular/forms';
 
+import { MethodeCounterGraphComponent } from './methode-counter-graph/methode-counter-graph.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,11 +28,13 @@ import { FormsModule } from '@angular/forms';
     MnistImageComponent,
     MnistGraphComponent,
     CanvasComponent,
+    MethodeCounterGraphComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    PlotlyModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
