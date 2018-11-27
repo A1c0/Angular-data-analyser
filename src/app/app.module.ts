@@ -11,6 +11,10 @@ import { MnistComponent } from './mnists/mnist/mnist.component';
 import { MnistImageComponent } from './mnists/mnist-image/mnist-image.component';
 import { MnistGraphComponent } from './mnists/mnist-graph/mnist-graph.component';
 import { CanvasComponent } from './mnists/canvas/canvas.component';
+import { StatsComponent } from './stats/stats.component';
+import { AuthService } from './services/auth.service';
+import { FormsModule } from '@angular/forms';
+import { AlertsComponent } from './alerts/alerts.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,8 @@ import { CanvasComponent } from './mnists/canvas/canvas.component';
     FooterComponent,
     BodyComponent,
     LoginComponent,
+    StatsComponent,
+    AlertsComponent,
     MnistComponent,
     MnistImageComponent,
     MnistGraphComponent,
@@ -26,9 +32,10 @@ import { CanvasComponent } from './mnists/canvas/canvas.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
