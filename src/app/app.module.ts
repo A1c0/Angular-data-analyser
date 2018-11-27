@@ -15,7 +15,7 @@ import { CanvasComponent } from './mnists/canvas/canvas.component';
 import { AuthService } from './services/auth.service';
 import { FormsModule } from '@angular/forms';
 
-import { MethodeCounterGraphComponent } from './methode-counter-graph/methode-counter-graph.component';
+import { CounterGraphComponent } from './counter-graph/counter-graph.component';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
@@ -29,7 +29,7 @@ import { HomeComponent } from './home/home.component';
     MnistImageComponent,
     MnistGraphComponent,
     CanvasComponent,
-    MethodeCounterGraphComponent,
+    CounterGraphComponent,
     HomeComponent,
   ],
   imports: [

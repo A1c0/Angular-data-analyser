@@ -7,10 +7,12 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  private methodCatsVsDogsCounter = 0;
-  private methodMintsCounter = 0;
+  private methodCatsVsDogsCounter;
+  private methodMintsCounter;
 
   constructor() {
+    this.methodCatsVsDogsCounter = Number(localStorage.getItem('CatsVsDogsCounter')) || 0;
+    this.methodMintsCounter = Number(localStorage.getItem('mintsCounter')) || 0;
   }
 
   ngOnInit() {
@@ -18,11 +20,11 @@ export class HomeComponent implements OnInit {
 
   useMethodCatsVsDogsCounter() {
     this.methodCatsVsDogsCounter++;
-    console.log(`methodCatsVsDogsCounter: ${this.methodCatsVsDogsCounter}`);
+    localStorage.setItem('CatsVsDogsCounter', String(this.methodCatsVsDogsCounter));
   }
 
   useMethodMintsCounter() {
     this.methodMintsCounter++;
-    console.log(`methodMintsCounter: ${this.methodMintsCounter}`);
+    localStorage.setItem('mintsCounter', String(this.methodMintsCounter));
   }
 }
