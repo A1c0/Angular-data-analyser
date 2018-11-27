@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MnistDrawComponent } from './mnist-draw.component';
+import { CanvasComponent } from './canvas.component';
 
-describe('MnistDrawComponent', () => {
-  let component: MnistDrawComponent;
-  let fixture: ComponentFixture<MnistDrawComponent>;
+describe('CanvasComponent', () => {
+  let component: CanvasComponent;
+  let fixture: ComponentFixture<CanvasComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MnistDrawComponent ]
+      declarations: [ CanvasComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MnistDrawComponent);
+    fixture = TestBed.createComponent(CanvasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
