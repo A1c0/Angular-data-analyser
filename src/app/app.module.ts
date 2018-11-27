@@ -16,6 +16,7 @@ import { AuthService } from './services/auth.service';
 import { FormsModule } from '@angular/forms';
 
 import { MethodeCounterGraphComponent } from './methode-counter-graph/methode-counter-graph.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MethodeCounterGraphComponent } from './methode-counter-graph/methode-co
     MnistGraphComponent,
     CanvasComponent,
     MethodeCounterGraphComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
