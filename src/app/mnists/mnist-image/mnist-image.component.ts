@@ -12,4 +12,12 @@ export class MnistImageComponent implements OnInit {
   ngOnInit() {
   }
 
+  uploadPic() {
+
+  };
+
+  loadMorePic() {
+
+  };
+
 }
