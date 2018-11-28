@@ -549,6 +549,11 @@
     semver "5.5.1"
     semver-intersect "1.4.0"
 
+"@types/canvasjs@^1.9.4":
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/@types/canvasjs/-/canvasjs-1.9.4.tgz#3cb7110ede0d86640440c63966d6343432061277"
+  integrity sha512-5KBu/+ppu+bHmIkebSGsSvNrJTYZ5G/vKgt8gjcTApxWWBtX0PyH3GzyzCcu0ae+0HjZUGqgFOxHIrNzC8Ae5Q==
+
 "@types/jasmine@*":
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.3.0.tgz#6b0e4b0192367d77e438ff660ccc4487c9602e7b"
@@ -1796,6 +1801,11 @@ canvas-fit@^1.5.0:
   integrity sha1-rhO+Zq3kL1vg5IfjRfzjCl5bXl8=
   dependencies:
     element-size "^1.1.1"
+
+canvasjs@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/canvasjs/-/canvasjs-1.8.1.tgz#698a4e002e336ce83ef2f9101a6bd276ba7657a3"
+  integrity sha1-aYpOAC4zbOg+8vkQGmvSdrp2V6M=
 
 cardinal@~0.4.2:
   version "0.4.4"
