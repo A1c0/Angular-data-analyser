@@ -18,7 +18,6 @@ const routes: Routes = [
   {path: 'mnist', component: MnistComponent},
   {path: 'method_graph', component: CounterGraphComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'stats', canActivate: [AuthGuardService], component: StatsComponent},
 ];
 
 @NgModule({
