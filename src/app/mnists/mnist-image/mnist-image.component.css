@@ -1,0 +1,18 @@
+.container {
+  margin-top: 20px;
+}
+
+img {
+  border: 1px solid black;
+  height: 150px;
+}
+
+.caseImg {
+  padding: 10px;
+}
+
+.btn {
+  color: brown;
+  border: 1px solid brown;
+  box-shadow: 5px 5px 18px #888888;
+}
