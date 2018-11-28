@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 
 import { CounterGraphComponent } from './counter-graph/counter-graph.component';
 import { HomeComponent } from './home/home.component';
+import {PredictService} from './services/predict.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,10 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     PlotlyModule
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    PredictService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

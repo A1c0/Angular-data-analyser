@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PredictService} from '../../services/predict.service';
 
 @Component({
   selector: 'app-mnist-graph',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MnistGraphComponent implements OnInit {
 
-  constructor() { }
+  public result : number;
 
-  ngOnInit() {
+  constructor(private predictService: PredictService) { }
+
+  ngOnInit() {  }
+
+  onPredict() {
+    this.predictService.predict();
+    this.result = this.predictService.result;
   }
-
 }
