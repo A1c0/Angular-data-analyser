@@ -1,21 +1,42 @@
+import { Injectable } from '@angular/core';
+
+import * as firebase from 'firebase';
+
+@Injectable()
+
 export class AuthService {
 
-  isAuth = false;
-
-  signIn() {
+  createNewUser(email: string, password: string) {
     return new Promise(
       (resolve, reject) => {
-        setTimeout(
+        firebase.auth().createUserWithEmailAndPassword(email, password).then(
           () => {
-            this.isAuth = true;
-            resolve(true);
-          }, 2000
+            resolve();
+          },
+          (error) => {
+            reject(error);
+          }
         );
       }
     );
   }
 
-  signOut() {
-    this.isAuth = false;
+  signInUser(email: string, password: string) {
+    return new Promise(
+      (resolve, reject) => {
+        firebase.auth().signInWithEmailAndPassword(email, password).then(
+          () => {
+            resolve();
+          },
+          (error) => {
+            reject(error);
+          }
+        );
+      }
+    );
+  }
+
+  signOutUser() {
+    firebase.auth().signOut();
   }
 }
