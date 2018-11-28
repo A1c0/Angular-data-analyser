@@ -20,6 +20,7 @@ import { AuthService } from './services/auth.service';
 
 import { CounterGraphComponent } from './counter-graph/counter-graph.component';
 import { HomeComponent } from './home/home.component';
+import {PredictService} from './services/predict.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,11 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule,
     PlotlyModule
   ],
-  providers: [AuthService, AuthGuardService],
+  providers: [
+    AuthService,
+    AuthGuardService,
+    PredictService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
