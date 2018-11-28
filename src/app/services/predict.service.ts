@@ -1,7 +1,9 @@
 export class PredictService {
-  result: number;
+  result = [];
 
   predict() {
-    this.result = Math.floor(Math.random() * 10);
+    for (let i = 0; i < 10; i++) {
+      this.result.push(Math.floor(Math.random() * 10));
+    }
   }
 }
