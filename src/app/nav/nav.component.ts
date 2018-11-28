@@ -10,6 +10,7 @@ import * as firebase from 'firebase';
 export class NavComponent implements OnInit {
 
   isAuth: boolean;
+  emailAuth: string;
 
   constructor(private authService: AuthService) { }
 
@@ -18,6 +19,7 @@ export class NavComponent implements OnInit {
       (user) => {
         if (user) {
           this.isAuth = true;
+          this.emailAuth = user.email;
         } else {
           this.isAuth = false;
         }

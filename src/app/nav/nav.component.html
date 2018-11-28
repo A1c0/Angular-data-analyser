@@ -3,6 +3,7 @@
     <h1>TP Angular</h1>
 
     <div>
+      <p *ngIf="isAuth">Connecté : {{emailAuth}}</p>
       <p>Menu :</p>
       <div>
         <button type="button" class="btn btn-default navbar-btn nav_button">Dogs VS Cats</button>
