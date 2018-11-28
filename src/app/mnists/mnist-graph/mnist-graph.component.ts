@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {PredictService} from '../../services/predict.service';
 
 import * as CanvasJS from './canvasjs.min';
@@ -13,7 +13,8 @@ export class MnistGraphComponent implements OnInit {
 
   public result: number;
 
-  constructor(private predictService: PredictService) { }
+  constructor(private predictService: PredictService) {
+  }
 
   ngOnInit() {
     let chart = new CanvasJS.Chart("chartContainer", {
