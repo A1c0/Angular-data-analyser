@@ -33,3 +33,4 @@ Go to http://localhost:4200/
 [Alexandre]: https://github.com/A1C0
 [Installation]: https://github.com/A1c0/Angular-data-analyser/blob/master/README.md#install
 [Run]: https://github.com/A1c0/Angular-data-analyser/blob/master/README.md#run
+[Credits]: https://github.com/A1c0/Angular-data-analyser/blob/master/README.md#credits
