@@ -17,7 +17,7 @@ export class CounterGraphComponent implements OnInit {
 
   constructor() {
     const methodCatsVsDogsCounter = Number(localStorage.getItem('CatsVsDogsCounter')) || 0;
-    const methodMintsCounter = Number(localStorage.getItem('mintsCounter')) || 0;
+    const methodMintsCounter = Number(localStorage.getItem('MnitsCounter')) || 0;
 
     this.graph.data[0].values = [methodCatsVsDogsCounter, methodMintsCounter];
   }

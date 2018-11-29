@@ -6,8 +6,6 @@
       <p *ngIf="isAuth">Connecté : {{emailAuth}}</p>
       <p>Menu :</p>
       <div>
-        <button type="button" class="btn btn-default navbar-btn nav_button">Dogs VS Cats</button>
-        <button type="button" class="btn btn-default navbar-btn nav_button" routerLink="/mnist">MNIST</button>
         <button class="btn btn-default navbar-btn nav_button" routerLinkActive="active" *ngIf="!isAuth">
           <a routerLink="auth/signup">Créer un compte</a>
         </button>
@@ -17,8 +15,9 @@
         <button class="btn btn-default navbar-btn nav_button" *ngIf="isAuth">
           <a (click)="onSignOut()">Déconnexion</a>
         </button>
-        <button type="button" class="btn btn-default navbar-btn nav_button"><a routerLink="/mnist">Mnist</a></button>
-        <button type="button" class="btn btn-default navbar-btn nav_button"><a routerLink="/dogs_cats">Dogs & Cats</a></button>
+        <button type="button" class="btn btn-default navbar-btn nav_button" (click)="mnistIncrement()" routerLink="/mnist">Mnist</button>
+        <button type="button" class="btn btn-default navbar-btn nav_button" (click)="dogVsCatsIncrement()" routerLink="/dogs_cats" >Dogs & Cats</button>
+        <button type="button" class="btn btn-default navbar-btn nav_button" routerLink="/method_graph">Stats</button>
       </div>
     </div>
 

@@ -18,7 +18,7 @@ const routes: Routes = [
   {path: 'mnist', canActivate: [AuthGuardService], component: MnistComponent},
   {path: 'method_graph', canActivate: [AuthGuardService], component: CounterGraphComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'dogs_cats', component: DogsCatsComponent},
+  {path: 'dogs_cats', canActivate: [AuthGuardService], component: DogsCatsComponent},
 ];
 
 @NgModule({
