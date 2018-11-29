@@ -11,17 +11,14 @@ import * as CanvasJS from './canvasjs.min';
 
 export class MnistGraphComponent implements OnInit {
 
-  public result: number;
-
-  constructor(private predictService: PredictService) {
-  }
+  constructor(private predictService: PredictService) { }
 
   ngOnInit() {
     let chart = new CanvasJS.Chart("chartContainer", {
       animationEnabled: true,
       exportEnabled: true,
       title: {
-        text: "Basic Column Chart in Angular"
+        text: "Mnist analyser"
       },
       data: [{
         type: "column",
@@ -45,49 +42,50 @@ export class MnistGraphComponent implements OnInit {
 
   onPredict() {
     this.predictService.predict();
-    this.result = this.predictService.result;
 
     let result0 = 0, result1 = 0, result2 = 0, result3 = 0, result4 = 0,
       result5 = 0, result6 = 0, result7 = 0, result8 = 0, result9 = 0;
 
-    switch (this.result) {
-      case 0:
-        result0 = 100;
-        break;
-      case 1:
-        result1 = 100;
-        break;
-      case 2:
-        result2 = 100;
-        break;
-      case 3:
-        result3 = 100;
-        break;
-      case 4:
-        result4 = 100;
-        break;
-      case 5:
-        result5 = 100;
-        break;
-      case 6:
-        result6 = 100;
-        break;
-      case 7:
-        result7 = 100;
-        break;
-      case 8:
-        result8 = 100;
-        break;
-      case 9:
-        result9 = 100;
-        break;
-    }
+    this.predictService.result.forEach(result => {
+      switch (result[0]) {
+        case 0:
+          result0 = result[1];
+          break;
+        case 1:
+          result1 = result[1];
+          break;
+        case 2:
+          result2 = result[1];
+          break;
+        case 3:
+          result3 = result[1];
+          break;
+        case 4:
+          result4 = result[1];
+          break;
+        case 5:
+          result5 = result[1];
+          break;
+        case 6:
+          result6 = result[1];
+          break;
+        case 7:
+          result7 = result[1];
+          break;
+        case 8:
+          result8 = result[1];
+          break;
+        case 9:
+          result9 = result[1];
+          break;
+      }
+    });
 
     let chart = new CanvasJS.Chart("chartContainer", {
       animationEnabled: true,
       exportEnabled: true,
       title: {
-        text: "Basic Column Chart in Angular"
+        text: "Mnist analyser"
       },
       data: [{
         type: "column",
