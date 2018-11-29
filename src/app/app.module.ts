@@ -20,6 +20,9 @@ import { AuthService } from './services/auth.service';
 
 import { CounterGraphComponent } from './counter-graph/counter-graph.component';
 import { HomeComponent } from './home/home.component';
+import {CommunicationService} from './services/communication.service';
+import { AlertComponent } from './alert/alert.component';
+import {NgbAlertModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,7 @@ import { HomeComponent } from './home/home.component';
     CanvasComponent,
     CounterGraphComponent,
     HomeComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,9 +46,10 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    PlotlyModule
+    PlotlyModule,
+    NgbModule
   ],
-  providers: [AuthService, AuthGuardService],
+  providers: [AuthService, AuthGuardService, CommunicationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
