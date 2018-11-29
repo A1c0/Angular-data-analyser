@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) {
     this.methodCatsVsDogsCounter = Number(localStorage.getItem('CatsVsDogsCounter')) || 0;
-    this.methodMintsCounter = Number(localStorage.getItem('mintsCounter')) || 0;
+    this.methodMintsCounter = Number(localStorage.getItem('MnitsCounter')) || 0;
   }
 
   ngOnInit() {
@@ -28,6 +28,6 @@ export class HomeComponent implements OnInit {
 
   useMethodMintsCounter() {
     this.methodMintsCounter++;
-    localStorage.setItem('mintsCounter', String(this.methodMintsCounter));
+    localStorage.setItem('MnitsCounter', String(this.methodMintsCounter));
   }
 }
