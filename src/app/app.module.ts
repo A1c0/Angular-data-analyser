@@ -21,6 +21,7 @@ import { AuthService } from './services/auth.service';
 import { CounterGraphComponent } from './counter-graph/counter-graph.component';
 import { HomeComponent } from './home/home.component';
 import {PredictService} from './services/predict.service';
+import { DogsCatsComponent } from './dogs-cats/dogs-cats.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import {PredictService} from './services/predict.service';
     CanvasComponent,
     CounterGraphComponent,
     HomeComponent,
+    DogsCatsComponent,
   ],
   imports: [
     BrowserModule,
