@@ -21,6 +21,5 @@ export class PredictService {
     this.result[0] = [a, aPercent];
     this.result[1] = [b, bPercent];
     this.result[2] = [c, cPercent];
-    console.log(this.result);
   }
 }

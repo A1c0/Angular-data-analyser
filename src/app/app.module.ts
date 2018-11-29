@@ -24,6 +24,7 @@ import {CommunicationService} from './services/communication.service';
 import { AlertComponent } from './alert/alert.component';
 import {NgbAlertModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {PredictService} from './services/predict.service';
+import { DogsCatsComponent } from './dogs-cats/dogs-cats.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import {PredictService} from './services/predict.service';
     CanvasComponent,
     CounterGraphComponent,
     HomeComponent,
+    DogsCatsComponent,
     AlertComponent,
   ],
   imports: [
