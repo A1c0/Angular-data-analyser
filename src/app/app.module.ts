@@ -20,6 +20,9 @@ import { AuthService } from './services/auth.service';
 
 import { CounterGraphComponent } from './counter-graph/counter-graph.component';
 import { HomeComponent } from './home/home.component';
+import {CommunicationService} from './services/communication.service';
+import { AlertComponent } from './alert/alert.component';
+import {NgbAlertModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {PredictService} from './services/predict.service';
 import { DogsCatsComponent } from './dogs-cats/dogs-cats.component';
 
@@ -38,6 +41,7 @@ import { DogsCatsComponent } from './dogs-cats/dogs-cats.component';
     CounterGraphComponent,
     HomeComponent,
     DogsCatsComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,12 +49,14 @@ import { DogsCatsComponent } from './dogs-cats/dogs-cats.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    PlotlyModule
+    PlotlyModule,
+    NgbModule
   ],
   providers: [
     AuthService,
     AuthGuardService,
-    PredictService
+    PredictService,
+    CommunicationService
   ],
   bootstrap: [AppComponent]
 })

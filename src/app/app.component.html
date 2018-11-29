@@ -3,6 +3,7 @@
     <app-nav></app-nav>
   </div>
   <div class="col-sm-8">
+    <app-alert *ngIf="isAlerting" [typeAlerting]="typeAlerting"></app-alert>
     <app-body></app-body>
   </div>
 </div>

@@ -11,6 +11,10 @@ img {
   padding: 10px;
 }
 
+.images {
+  margin-bottom: 20px;
+}
+
 .btn {
   color: brown;
   border: 1px solid brown;
