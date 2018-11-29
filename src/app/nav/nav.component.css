@@ -10,12 +10,18 @@
   border: 2px solid brown;
   border-radius: 15px;
   box-shadow: 5px 10px 18px #888888;
-  height: 100%;
+  max-width: 300px;
+}
+
+button {
+  width: auto;
+  left: 0;
 }
 
 h1 {
   text-align: center;
   color: brown;
+  cursor: pointer;
 }
 div {
   margin: 15px;
