@@ -23,6 +23,7 @@ import { HomeComponent } from './home/home.component';
 import {CommunicationService} from './services/communication.service';
 import { AlertComponent } from './alert/alert.component';
 import {NgbAlertModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {PredictService} from './services/predict.service';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,12 @@ import {NgbAlertModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
     PlotlyModule,
     NgbModule
   ],
-  providers: [AuthService, AuthGuardService, CommunicationService],
+  providers: [
+    AuthService,
+    AuthGuardService,
+    PredictService,
+    CommunicationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
