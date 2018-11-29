@@ -1,0 +1,43 @@
+<!--<div class="alert alert-success alert-dismissible" role="alert" data-dismiss="alert" *ngIf="typeAlerting==='success'"
+     id="alertSuccess">
+  <button type="button" class="close" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <strong>Success !</strong> Vous êtes maintenant connecté.
+</div>
+<div class="alert alert-danger alert-dismissible" role="alert" *ngIf="typeAlerting==='failed'">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="$('.alert').hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <strong>Erreur !</strong> Vérifiez vos identifiants et réessayez.
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+  const $alertMsg = $("#alertSuccess");
+
+  $alertMsg.on("close.bs.alert", function () {
+    console.log('Test');
+    $alertMsg.hide();
+    return false;
+  });
+</script>-->
+
+<!--<ngb-alert type="success" [dismissible]="false">
+  Bootstrap is working!
+</ngb-alert>
+
+<ngb-alert *ngIf="successMessage" type="success" (close)="successMessage = null">
+  Youpi !
+</ngb-alert>-->
+
+
+<ngb-alert *ngIf="typeAlerting==='success'" type="success" (close)="typeAlerting = null">
+  Connexion réussi
+</ngb-alert>
+
+<ngb-alert *ngIf="typeAlerting==='failed'" type="danger" (close)="typeAlerting = null">
+  <strong>Erreur</strong>. Vérifiez vos identifiants et réessayez.
+</ngb-alert>
+

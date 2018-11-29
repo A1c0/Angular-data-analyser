@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {AuthService} from '../../services/auth.service';
 import {Router} from '@angular/router';
+import {CommunicationService} from '../../services/communication.service';
 
 @Component({
   selector: 'app-login',
@@ -12,10 +13,12 @@ export class LoginComponent implements OnInit {
 
   signinForm: FormGroup;
   errorMessage: string;
+  @Output() alertLogin = new EventEmitter<any>();
 
   constructor(private formBuilder: FormBuilder,
               private authService: AuthService,
-              private router: Router) { }
+              private router: Router,
+              private communicationService: CommunicationService) { }
 
   ngOnInit() {
     this.initForm();
@@ -35,9 +38,10 @@ export class LoginComponent implements OnInit {
     this.authService.signInUser(email, password).then(
       () => {
         this.router.navigate(['/home']);
+        this.communicationService.emitChange('success');
       },
-      (error) => {
-        this.errorMessage = error;
+      () => {
+        this.communicationService.emitChange('failed');
       }
     );
   }

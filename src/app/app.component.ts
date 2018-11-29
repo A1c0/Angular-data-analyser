@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import * as firebase from 'firebase';
+import {CommunicationService} from './services/communication.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,9 @@ import * as firebase from 'firebase';
 })
 export class AppComponent {
   title = 'Angular-data-analyser';
-  constructor() {
+  typeAlerting: String;
+  isAlerting: Boolean;
+  constructor(private communicationService: CommunicationService) {
     const config = {
       apiKey: 'AIzaSyBrWB9H2LY1Tsuo5zAlwfdGA2a4q-nvGdw',
       authDomain: 'angular-data-analyser.firebaseapp.com',
@@ -18,5 +21,10 @@ export class AppComponent {
       messagingSenderId: '174125751466'
     };
     firebase.initializeApp(config);
+
+    communicationService.changeEmitted$.subscribe(data => {
+      this.isAlerting = true;
+      this.typeAlerting = data;
+    });
   }
 }
