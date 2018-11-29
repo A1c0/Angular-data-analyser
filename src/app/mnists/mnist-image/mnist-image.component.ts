@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-mnist-image',
@@ -7,17 +7,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MnistImageComponent implements OnInit {
 
-  constructor() { }
+  public imagesList: Array<string> = [];
+
+  constructor() {
+  }
 
   ngOnInit() {
+    for (let i = 0; i < 6; i++) {
+      this.imagesList.push('../../../assets/dataSets/nothing.png');
+    }
   }
 
   uploadPic() {
 
-  };
+  }
 
   loadMorePic() {
+    this.imagesList = this.imagesList.filter(x => false);
+    for (let i = 0; i < 6; i++) {
+      this.imagesList.push(`../../../assets/dataSets/mnist/${getRandomInt(1, 670)}.jpg`);
+    }
+    console.log(this.imagesList);
+  }
 
-  };
+}
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
 }

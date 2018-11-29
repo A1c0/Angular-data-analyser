@@ -1,24 +1,25 @@
 <div class="container">
   <div class="row col-sm-12">
     <div class="col-sm-4 caseImg">
-      <img src="../../../../mnist/0.jpg">
+      <img [src]='imagesList[0]'>
     </div>
     <div class="col-sm-4 caseImg">
-      <img src="../../../../mnist/1.jpg">
+      <img [src]='imagesList[1]'>
     </div>
     <div class="col-sm-4 caseImg">
-      <img src="../../../../mnist/2.jpg">
+      <img [src]='imagesList[2]'>
     </div>
     <div class="col-sm-4 caseImg">
-      <img src="../../../../mnist/3.jpg">
+      <img [src]='imagesList[3]'>
     </div>
     <div class="col-sm-4 caseImg">
-      <img src="../../../../mnist/4.jpg">
+      <img [src]='imagesList[4]'>
     </div>
     <div class="col-sm-4 caseImg">
-      <img src="../../../../mnist/5.jpg">
+      <img [src]='imagesList[5]'>
     </div>
   </div>
-  <button type="button" class="btn" (click)="uploadPic()">Upload</button>
+  <input type="file" class="btn" (change)="onFileSelected($event)">
+  <button type="button" class="btn" (click)="onUpload()">Upload</button>
   <button type="button" class="btn" (click)="loadMorePic()">Load more</button>
 </div>
