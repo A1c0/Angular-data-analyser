@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as CanvasJS from './canvasjs.min';
 
 @Component({
   selector: 'app-dogs-cats',
@@ -7,14 +8,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DogsCatsComponent implements OnInit {
 
-  pet = "Quel est donc cet animal ?";
-  dog = 0;
-  cat = 0;
+  pet = "Suspens ...";
+  dog = 50;
+  cat = 50;
   randomImageNumber = "../../assets/cats&dogs/test_img_10.jpg";
 
   constructor() { }
 
   ngOnInit() {
+    let chart = new CanvasJS.Chart("chartContainer", {
+      theme: "light1",
+      animationEnabled: true,
+      exportEnabled: true,
+      title:{
+        text: "Chat ou chien ?"
+      },
+      data: [{
+        type: "pie",
+        showInLegend: true,
+        toolTipContent: "<b>{name}</b>: ${y} (#percent%)",
+        indexLabel: "{name} - #percent%",
+        dataPoints: [
+          { y: this.dog, name: "Chien" },
+          { y: this.cat, name: "Chat" }
+        ]
+      }]
+    });
+
+    chart.render();
   }
 
   predictPet() {
@@ -29,6 +50,27 @@ export class DogsCatsComponent implements OnInit {
       this.cat = 100 - predict;
       this.pet = "Cet animal serait un chat";
     }
+
+    let chart = new CanvasJS.Chart("chartContainer", {
+      theme: "light1",
+      animationEnabled: true,
+      exportEnabled: true,
+      title:{
+        text: "Chat ou chien ?"
+      },
+      data: [{
+        type: "pie",
+        showInLegend: true,
+        toolTipContent: "<b>{name}</b>: ${y} (#percent%)",
+        indexLabel: "{name} - #percent%",
+        dataPoints: [
+          { y: this.dog, name: "Chien" },
+          { y: this.cat, name: "Chat" }
+        ]
+      }]
+    });
+
+    chart.render();
   }
 
   randomPic() {
