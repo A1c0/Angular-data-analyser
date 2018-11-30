@@ -1,11 +1,11 @@
+<h2>Chat ou chien ?</h2>
 <div>
 
-  <div>
-    <h1>Cats or Dogs ?</h1>
+  <div class="bloc">
     <p>Implémentation d'algorithmes de 'Deep Learning' (MobileNet et ResNet50) pour la classification d'images.</p>
   </div>
 
-  <div>
+  <div class="bloc">
     <img [src]="randomImageNumber" id="image_to_predict">
   </div>
 
@@ -17,7 +17,7 @@
     </select>
   </div>
 
-  <div>
+  <div class="bloc">
     <button class="btn" id="predict_btn" (click)="predict()">Prédiction</button>
     <label for="select-file-image" class="btn" id="load_your_image">
       Upload
@@ -26,15 +26,11 @@
     <button class="btn" id="load_test_image" (click)="randomPic()">Image aléatoire</button>
   </div>
 
-  <div>
-    <div>
-      <p>Résultat :</p>
-      <ul>
-        <li>Chien : {{ dog }}%</li>
-        <li>Chat : {{ cat }}%</li>
-      </ul>
-    </div>
-    <h3>{{ pet }}</h3>
+  <div class="bloc">
+    <button class="btn btn-predict" (click)="predictPet()">Guess pet</button>
+    <p id="witchPet">De quel animal s'agit t-il ?</p>
+    <p>{{ pet }}</p>
+    <div id="chartContainer" style="height: 200px; width: 75%;"></div>
   </div>
 
 </div>

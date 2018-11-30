@@ -1,5 +1,6 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import * as tf from '@tensorflow/tfjs';
+import * as CanvasJS from './canvasjs.min';
 
 @Component({
   selector: 'app-dogs-cats',
@@ -8,9 +9,9 @@ import * as tf from '@tensorflow/tfjs';
 })
 export class DogsCatsComponent implements OnInit {
 
-  pet = 'Quel est donc cet animal ?';
-  dog = 0;
-  cat = 0;
+  pet = 'Suspens ...';
+  dog = 50;
+  cat = 50;
   randomImageNumber = '../../assets/dataSets/catsVsDogs/test_img_10.jpg';
 
   model = null;
@@ -20,6 +21,26 @@ export class DogsCatsComponent implements OnInit {
   }
 
   ngOnInit() {
+    let chart = new CanvasJS.Chart("chartContainer", {
+      theme: "light1",
+      animationEnabled: true,
+      exportEnabled: true,
+      title:{
+        text: "Chat ou chien ?"
+      },
+      data: [{
+        type: "pie",
+        showInLegend: true,
+        toolTipContent: "<b>{name}</b>: ${y} (#percent%)",
+        indexLabel: "{name} - #percent%",
+        dataPoints: [
+          { y: this.dog, name: "Chien" },
+          { y: this.cat, name: "Chat" }
+        ]
+      }]
+    });
+
+    chart.render();
   }
 
   randomPic() {
@@ -67,6 +88,27 @@ export class DogsCatsComponent implements OnInit {
       this.cat = Number(results[1].probability);
       this.dog = Number(results[0].probability);
     }
+
+    let chart = new CanvasJS.Chart("chartContainer", {
+      theme: "light1",
+      animationEnabled: true,
+      exportEnabled: true,
+      title:{
+        text: "Chat ou chien ?"
+      },
+      data: [{
+        type: "pie",
+        showInLegend: true,
+        toolTipContent: "<b>{name}</b>: ${y} (#percent%)",
+        indexLabel: "{name} - #percent%",
+        dataPoints: [
+          { y: this.dog, name: "Chien" },
+          { y: this.cat, name: "Chat" }
+        ]
+      }]
+    });
+
+    chart.render();
   }
 
   preprocessImage(image, modelName) {

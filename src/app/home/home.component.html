@@ -1,5 +1,4 @@
-<div class="btn-group-vertical">
-  {{alertName}}
+<!--<div class="btn-group-vertical">
   <button class="btn btn-outline-primary btn-lg btn-block" (click)="useMethodCatsVsDogsCounter()" routerLink="/dogs_cats">
     Cats Vs Dogs
   </button>
@@ -7,5 +6,36 @@
   <button class="btn btn-outline-secondary btn-lg btn-block" (click)="useMethodMintsCounter()" routerLink="/mnist">
     Mnits
   </button>
+</div>-->
+
+<div class="row">
+  <div class="col-sm-6 col-md-4" id="first_row">
+    <div class="thumbnail">
+      <img src="https://www.wikichat.fr/wp-content/uploads/sites/2/comment-soigner-une-plaie-dun-chat.jpg" alt="...">
+      <div class="caption">
+        <h3>Chiens et chats</h3>
+        <p>Test un dataset d'images de chiens et chats, essaie de prédire de bon animal.</p>
+        <p class="button">
+          <button (click)="dogVsCatsIncrement()" routerLink="/dogs_cats" class="btn btn-primary" role="button">
+            Voir
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="https://corochann.com/wp-content/uploads/2017/02/mnist_plot-800x600.png" alt="...">
+      <div class="caption">
+        <h3>Mnist</h3>
+        <p>Écrit un nombre et regarde si l'IA determine quel nombre tu as écris.</p>
+        <p class="button">
+          <button (click)="mnistIncrement()" routerLink="/mnist" class="btn btn-primary" role="button">
+            Voir
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
 

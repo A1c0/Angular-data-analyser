@@ -12,7 +12,7 @@ export class CounterGraphComponent implements OnInit {
       labels: ['Dogs VS cats', 'Mnist'],
       type: 'pie'
     }],
-    layout: {width: 700, height: 500, title: 'Quel méthode préferé vous ?'}
+    layout: {width: 700, height: 500, title: 'Quelle méthode préferez vous ?'}
   };
 
   constructor() {

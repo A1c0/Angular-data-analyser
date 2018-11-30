@@ -1,15 +1,16 @@
-div>div {
+.bloc {
   padding: 10px;
 }
 
 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 500px;
   max-height: 300px;
   border: 1px solid brown;
   border-radius: 10%;
   box-shadow: 5px 5px 18px #888888;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .btn {
@@ -17,4 +18,16 @@ img {
   border: 1px solid brown;
   box-shadow: 5px 5px 18px #888888;
   margin: 10px;
+}
+
+#predict_btn {
+  background-color: brown;
+  color: #ffffff;
+  box-shadow: 5px 5px 18px #888888;
+}
+
+#witchPet {
+  color: brown;
+  font-size: 25px;
+  padding: 10px;
 }
