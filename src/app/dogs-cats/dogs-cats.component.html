@@ -6,11 +6,11 @@
   </div>
 
   <div>
-    <img [src]="randomImageNumber">
+    <img [src]="randomImageNumber" id="image_to_predict">
   </div>
 
   <div>
-    <select class="custom-select" id="choose_model">
+    <select class="custom-select" #choose_model (change)="loadCurrentModel(choose_model)">
       <option selected>Selectionner un modèle</option>
       <option value="mobilenet">mobilenet</option>
       <option value="resnet50">resnet50</option>
@@ -18,7 +18,7 @@
   </div>
 
   <div>
-    <button class="btn" id="predict_btn">Predict</button>
+    <button class="btn" id="predict_btn" (click)="predict()">Prédiction</button>
     <label for="select-file-image" class="btn" id="load_your_image">
       Upload
     </label>
@@ -27,7 +27,6 @@
   </div>
 
   <div>
-    <button class="btn btn-predict" (click)="predictPet()">Guess pet</button>
     <div>
       <p>Résultat :</p>
       <ul>
