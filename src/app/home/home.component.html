@@ -15,7 +15,11 @@
       <div class="caption">
         <h3>Chiens et chats</h3>
         <p>Test un dataset d'images de chiens et chats, essaie de prédire de bon animal.</p>
-        <p class="button"><a routerLink="/dogs_cats" class="btn btn-primary" role="button">Voir</a></p>
+        <p class="button">
+          <button (click)="dogVsCatsIncrement()" routerLink="/dogs_cats" class="btn btn-primary" role="button">
+            Voir
+          </button>
+        </p>
       </div>
     </div>
   </div>
@@ -25,7 +29,11 @@
       <div class="caption">
         <h3>Mnist</h3>
         <p>Écrit un nombre et regarde si l'IA determine quel nombre tu as écris.</p>
-        <p class="button"><a routerLink="/mnist" class="btn btn-primary" role="button">Voir</a></p>
+        <p class="button">
+          <button (click)="mnistIncrement()" routerLink="/mnist" class="btn btn-primary" role="button">
+            Voir
+          </button>
+        </p>
       </div>
     </div>
   </div>
