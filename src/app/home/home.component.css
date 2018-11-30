@@ -1,0 +1,35 @@
+.thumbnail img {
+  width: 242px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.thumbnail {
+  color: brown;
+  border: 1px solid brown;
+  box-shadow: 5px 5px 18px #888888;
+  border-radius: 5px;
+  padding: 20px;
+  min-width: 282px;
+  min-height: 430px;
+}
+
+.thumbnail p {
+  color: black;
+}
+
+.thumbnail {
+  text-align: center;
+}
+
+.btn {
+  background-color: brown;
+  border: 1px solid brown;
+  box-shadow: 5px 5px 18px #888888;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}

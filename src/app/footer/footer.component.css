@@ -1,5 +1,8 @@
 footer {
   margin-top: 20px;
+  text-align: center;
+  background: gray;
+  padding: 30px;
 }
 
 .panel-body {
