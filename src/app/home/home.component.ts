@@ -21,12 +21,12 @@ export class HomeComponent implements OnInit {
     this.alertName = this.route.snapshot.queryParams.alertName;
   }
 
-  useMethodCatsVsDogsCounter() {
+  dogVsCatsIncrement() {
     this.methodCatsVsDogsCounter++;
     localStorage.setItem('CatsVsDogsCounter', String(this.methodCatsVsDogsCounter));
   }
 
-  useMethodMintsCounter() {
+  mnistIncrement() {
     this.methodMintsCounter++;
     localStorage.setItem('MnitsCounter', String(this.methodMintsCounter));
   }
