@@ -19,14 +19,14 @@ export class PredictService {
       .resizeNearestNeighbor([128, 128])
       .toFloat();
 
-    const offset = tf.scalar(127.5);
+    const offset = tf.scalar(128);
     return tensor.sub(offset)
       .div(offset)
       .expandDims();
   }
 
   async predict() {
-    if (this.type !== 'canvas') {
+    if (this.type !== 'img' && this.type !== 'canvas') {
       await this.loadModel();
       const image = this.elementToPreduct;
       console.log(this.model);
@@ -47,7 +47,7 @@ export class PredictService {
         }).slice(0, 5);
       console.log(results);
     } else {
-      console.log('The implementation of the canvas prediction does not work ' +
+      console.log('The implementation of the mnist prediction does not work ' +
         'yet, so the value indicated in the graph is totally random.');
       const a = Math.floor(Math.random() * 10);
       let b;
