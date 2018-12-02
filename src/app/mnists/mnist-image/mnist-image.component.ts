@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {PredictService} from '../../services/predict.service';
 
 @Component({
   selector: 'app-mnist-image',
@@ -9,8 +10,7 @@ export class MnistImageComponent implements OnInit {
 
   public imagesList: Array<string> = [];
 
-  constructor() {
-  }
+  constructor(private predictService: PredictService) { }
 
   ngOnInit() {
     for (let i = 0; i < 6; i++) {
@@ -18,8 +18,8 @@ export class MnistImageComponent implements OnInit {
     }
   }
 
-  uploadPic() {
-
+  onPredict() {
+    this.predictService.predict();
   }
 
   loadMorePic() {
