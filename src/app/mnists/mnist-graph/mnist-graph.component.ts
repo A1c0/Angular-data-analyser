@@ -14,25 +14,25 @@ export class MnistGraphComponent implements OnInit {
   constructor(private predictService: PredictService) { }
 
   ngOnInit() {
-    let chart = new CanvasJS.Chart("chartContainer", {
+    const chart = new CanvasJS.Chart('chartContainer', {
       animationEnabled: true,
       exportEnabled: true,
       title: {
-        text: "Mnist analyser"
+        text: 'Mnist analyser'
       },
       data: [{
-        type: "column",
+        type: 'column',
         dataPoints: [
-          { y: 0, label: "0" },
-          { y: 0, label: "1" },
-          { y: 0, label: "2" },
-          { y: 0, label: "3" },
-          { y: 0, label: "4" },
-          { y: 0, label: "5" },
-          { y: 0, label: "6" },
-          { y: 0, label: "7" },
-          { y: 0, label: "8" },
-          { y: 0, label: "9" }
+          { y: 0, label: '0' },
+          { y: 0, label: '1' },
+          { y: 0, label: '2' },
+          { y: 0, label: '3' },
+          { y: 0, label: '4' },
+          { y: 0, label: '5' },
+          { y: 0, label: '6' },
+          { y: 0, label: '7' },
+          { y: 0, label: '8' },
+          { y: 0, label: '9' }
         ]
       }]
     });
@@ -81,25 +81,25 @@ export class MnistGraphComponent implements OnInit {
       }
     });
 
-    let chart = new CanvasJS.Chart("chartContainer", {
+    const chart = new CanvasJS.Chart('chartContainer', {
       animationEnabled: true,
       exportEnabled: true,
       title: {
-        text: "Mnist analyser"
+        text: 'Mnist analyser'
       },
       data: [{
-        type: "column",
+        type: 'column',
         dataPoints: [
-          { y: result0, label: "0" },
-          { y: result1, label: "1" },
-          { y: result2, label: "2" },
-          { y: result3, label: "3" },
-          { y: result4, label: "4" },
-          { y: result5, label: "5" },
-          { y: result6, label: "6" },
-          { y: result7, label: "7" },
-          { y: result8, label: "8" },
-          { y: result9, label: "9" }
+          { y: result0, label: '0' },
+          { y: result1, label: '1' },
+          { y: result2, label: '2' },
+          { y: result3, label: '3' },
+          { y: result4, label: '4' },
+          { y: result5, label: '5' },
+          { y: result6, label: '6' },
+          { y: result7, label: '7' },
+          { y: result8, label: '8' },
+          { y: result9, label: '9' }
         ]
       }]
     });

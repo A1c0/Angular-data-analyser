@@ -21,21 +21,21 @@ export class DogsCatsComponent implements OnInit {
   }
 
   ngOnInit() {
-    let chart = new CanvasJS.Chart("chartContainer", {
-      theme: "light1",
+    const chart = new CanvasJS.Chart('chartContainer', {
+      theme: 'light1',
       animationEnabled: true,
       exportEnabled: true,
-      title:{
-        text: "Chat ou chien ?"
+      title: {
+        text: 'Chat ou chien ?'
       },
       data: [{
-        type: "pie",
+        type: 'pie',
         showInLegend: true,
-        toolTipContent: "<b>{name}</b>: ${y} (#percent%)",
-        indexLabel: "{name} - #percent%",
+        toolTipContent: '<b>{name}</b>: ${y} (#percent%)',
+        indexLabel: '{name} - #percent%',
         dataPoints: [
-          { y: this.dog, name: "Chien" },
-          { y: this.cat, name: "Chat" }
+          {y: this.dog, name: 'Chien'},
+          {y: this.cat, name: 'Chat'}
         ]
       }]
     });
@@ -89,21 +89,21 @@ export class DogsCatsComponent implements OnInit {
       this.dog = Number(results[0].probability);
     }
 
-    let chart = new CanvasJS.Chart("chartContainer", {
-      theme: "light1",
+    const chart = new CanvasJS.Chart('chartContainer', {
+      theme: 'light1',
       animationEnabled: true,
       exportEnabled: true,
-      title:{
-        text: "Chat ou chien ?"
+      title: {
+        text: 'Chat ou chien ?'
       },
       data: [{
-        type: "pie",
+        type: 'pie',
         showInLegend: true,
-        toolTipContent: "<b>{name}</b>: ${y} (#percent%)",
-        indexLabel: "{name} - #percent%",
+        toolTipContent: '<b>{name}</b>: ${y} (#percent%)',
+        indexLabel: '{name} - #percent%',
         dataPoints: [
-          { y: this.dog, name: "Chien" },
-          { y: this.cat, name: "Chat" }
+          {y: this.dog, name: 'Chien'},
+          {y: this.cat, name: 'Chat'}
         ]
       }]
     });

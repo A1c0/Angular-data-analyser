@@ -1,12 +1,12 @@
 import {Component, OnInit, ElementRef, AfterViewInit, ViewChild, Input} from '@angular/core';
-import { fromEvent } from 'rxjs';
-import { switchMap, takeUntil, pairwise } from 'rxjs/operators';
+import {fromEvent} from 'rxjs';
+import {switchMap, takeUntil, pairwise} from 'rxjs/operators';
+import {PredictService} from '../../services/predict.service';
 
 @Component({
   selector: 'app-canvas',
   templateUrl: './canvas.component.html',
   styleUrls: ['./canvas.component.css'],
-  template: '<canvas #canvas></canvas>',
   styles: ['canvas { border: 1px solid brown; border-radius: 10px; }']
 })
 export class CanvasComponent implements AfterViewInit {
@@ -18,6 +18,11 @@ export class CanvasComponent implements AfterViewInit {
   @Input() public height = 250;
 
   private cx: CanvasRenderingContext2D;
+  private predictService: PredictService;
+
+  public constructor(predictService: PredictService) {
+    this.predictService = predictService;
+  }
 
   public ngAfterViewInit() {
     // get the context
@@ -71,6 +76,7 @@ export class CanvasComponent implements AfterViewInit {
         };
 
         this.drawOnCanvas(prevPos, currentPos);
+        this.predictService.setElementToPreduct(canvasEl, 'canvas');
       });
   }
 
@@ -79,7 +85,9 @@ export class CanvasComponent implements AfterViewInit {
     currentPos: { x: number, y: number }
   ) {
     // incase the context is not set
-    if (!this.cx) { return; }
+    if (!this.cx) {
+      return;
+    }
 
     // start our drawing path
     this.cx.beginPath();
