@@ -6,8 +6,7 @@ import {PredictService} from '../../services/predict.service';
 @Component({
   selector: 'app-canvas',
   templateUrl: './canvas.component.html',
-  styleUrls: ['./canvas.component.css'],
-  styles: ['canvas { border: 1px solid brown; border-radius: 10px; }']
+  styleUrls: ['./canvas.component.css']
 })
 export class CanvasComponent implements AfterViewInit {
   // a reference to the canvas element from our template
@@ -103,5 +102,11 @@ export class CanvasComponent implements AfterViewInit {
       // strokes the current path with the styles we set earlier
       this.cx.stroke();
     }
+  }
+
+  clear() {
+    const canvasEl: HTMLCanvasElement = this.canvas.nativeElement;
+    this.cx = canvasEl.getContext('2d');
+    this.cx.clearRect(0, 0, canvasEl.width, canvasEl.height);
   }
 }
