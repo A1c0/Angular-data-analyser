@@ -10,16 +10,13 @@ export class MnistImageComponent implements OnInit {
 
   public imagesList: Array<string> = [];
 
-  constructor(private predictService: PredictService) { }
+  constructor(private predictService: PredictService) {
+  }
 
   ngOnInit() {
     for (let i = 0; i < 6; i++) {
       this.imagesList.push('../../../assets/dataSets/nothing.png');
     }
-  }
-
-  onPredict() {
-    this.predictService.predict();
   }
 
   loadMorePic() {
@@ -30,6 +27,17 @@ export class MnistImageComponent implements OnInit {
     console.log(this.imagesList);
   }
 
+  onFileSelected($event) {
+
+  }
+
+  onUpload() {
+
+  }
+
+  choose(id: number) {
+    this.predictService.setElementToPreduct(document.getElementById(`img_mnist_${id}`), 'img');
+  }
 }
 
 function getRandomInt(min, max) {
